@@ -1,0 +1,87 @@
+/* The main container for our hover-card */
+.sca-hover-card {
+    position: absolute;
+    z-index: 10000;
+    background-color: #1a202c; /* Dark background */
+    color: #e2e8f0; /* Light text */
+    border: 1px solid #4a5568;
+    border-radius: 12px;
+    padding: 16px;
+    width: 280px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    pointer-events: none; /* Prevents the card from interfering with mouse events */
+  }
+  
+  .sca-hover-card.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Header section with score */
+  .sca-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #4a5568;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .sca-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .sca-score {
+    font-size: 24px;
+    font-weight: 700;
+    color: #48bb78; /* Green for high scores */
+  }
+  
+  /* Body section for shared interests */
+  .sca-body-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #a0aec0;
+  }
+  
+  .sca-interests-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .sca-interest-tag {
+    background-color: #2d3748;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  /* Spinner for loading state */
+  .sca-spinner {
+    border: 4px solid #4a5568;
+    border-top: 4px solid #63b3ed;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

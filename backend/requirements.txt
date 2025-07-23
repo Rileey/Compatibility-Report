@@ -1,0 +1,14 @@
+# Web Framework
+fastapi
+uvicorn
+
+# Twitter API
+tweepy
+
+# NLP and Machine Learning
+scikit-learn
+nltk
+vaderSentiment
+
+# For handling .env files
+python-dotenv
